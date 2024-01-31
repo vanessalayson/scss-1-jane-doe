@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #86A7FC;
+  color: #fff;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+}
+.main .main_paragraph {
+  font-weight: 700;
+}
+.main .main_paragraph:hover {
+  color: red;
+}/*# sourceMappingURL=main.css.map */
