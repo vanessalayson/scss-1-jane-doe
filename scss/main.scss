@@ -1,61 +1,40 @@
-@import './resets';
-@import './variables';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-
-@function weight($weight-name) {
-    @return map-get($font-weights, $weight-name);
-}
-
-// @mixin flexCenter {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-// }
-
-@mixin flexCenter($direction) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: $direction;
-}
-
-@mixin theme($light-theme: true) {
-    @if $light-theme {
-        background: lighten($primary-color, 100%);
-        color: darken($text-color, 100%);
-    }
-}
-
-// RESUME HERE ...
-
+@import 'config';
 
 body {
-    background-color: $primary-color;
-    color: $text-color;
+    background: $primary-color;
+    color: #fff;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1;
 }
 
-.main {
-    // @include flexCenter();
-    @include flexCenter(column);
-    width: 80%;
-    margin: 0 auto;
+h1, h2, h3 {
+    font-weight: 400;
+}
 
-    #{&}_paragraph {
-        // font-weight: map-get($font-weights, bold);
-        // font-weight: weight(regular);
-        font-weight: weight(bold);
+a {
+    color: #fff;
+    text-decoration: none;
+}
 
+header {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    padding: 1rem;
+}
 
-        &:hover {
-            color: red;
-        }
+main {
+    height: 100%;
+    width: 100%;
+
+    .social-icons {
+        position: fixed;
+        bottom: 1rem;
+        left: 1rem;
+
+        // RESUME HERE ...
     }
-}
-
-.light {
-    // @include theme($light-theme: true);
-    // @include theme($light-theme: false);
-    // @include theme();
-    // @include theme(true);
-    @include theme(false);
 }
