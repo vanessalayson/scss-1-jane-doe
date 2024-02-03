@@ -15,7 +15,7 @@
 .home_name {
   font-size: 5rem;
   padding-bottom: 1rem;
-  margin-top: 1rem;
+  margin-bottom: 1rem;
   border-bottom: 2px solid #fff;
 }
 .home_name--last {
@@ -99,6 +99,51 @@
 .nav .menu-nav.open {
   transform: translateY(0);
 }
+.nav .menu-nav_item {
+  transform: translateY(-100vh);
+  transition: all 1s ease-in-out;
+}
+.nav .menu-nav_item.open {
+  transform: translateY(0);
+}
+.nav .menu-nav_item.active > a {
+  color: #FF9BD2;
+}
+.nav .menu-nav_link {
+  display: inline-block;
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 2rem 0;
+  font-weight: 400;
+  transition: all 0.5s ease-in-out;
+}
+.nav .menu-nav_link:hover {
+  color: #FF9BD2;
+}
+
+.about {
+  padding-bottom: 2rem;
+}
+.about_bio-image {
+  height: 50vh;
+  width: 100%;
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../img/model-1.jpg") center top;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.about_bio-image p {
+  margin-bottom: 2rem;
+}
+.about_bio {
+  width: 80%;
+  text-align: center;
+}
+.about_bio h2 {
+  padding-bottom: 1rem;
+}
 
 body {
   background: #B4B4B8;
@@ -115,6 +160,10 @@ h1, h2, h3 {
 a {
   color: #fff;
   text-decoration: none;
+}
+
+.text-secondary {
+  color: #FF9BD2;
 }
 
 header {
