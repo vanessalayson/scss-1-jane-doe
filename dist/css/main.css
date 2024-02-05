@@ -144,6 +144,109 @@
 .about_bio h2 {
   padding-bottom: 1rem;
 }
+.about .jobs {
+  width: 60vw;
+  margin: 2rem auto 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+}
+.about .jobs_job {
+  background: #ceced1;
+  padding: 0.5rem;
+  border-bottom: 5px solid #FF9BD2;
+}
+.about .jobs_job h2, .about .jobs_job h3 {
+  margin: 0.5rem 0;
+}
+.about .jobs_job h6 {
+  margin: 0.3rem 0;
+}
+.about .social-icons {
+  display: flex;
+  flex-direction: column;
+}
+.about footer {
+  transform: rotate(90deg) translate(-6rem, -7rem);
+}
+
+.projects {
+  padding-bottom: 2rem;
+}
+.projects_bio-image {
+  height: 50vh;
+  width: 100%;
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../img/model-1.jpg") center top;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.projects_bio-image .text-secondary {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.projects_items {
+  width: 60vw;
+  margin: 2rem auto 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+}
+.projects_item {
+  position: relative;
+  border-bottom: 5px solid #FF9BD2;
+  overflow: hidden;
+  cursor: pointer;
+}
+.projects_item img {
+  width: 100%;
+}
+.projects_item::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #FF9BD2;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.projects_item:hover::after {
+  top: 0;
+  opacity: 0.9;
+}
+.projects_item:hover .projects_btn {
+  opacity: 1;
+}
+.projects_btns {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  text-align: center;
+}
+.projects_btn {
+  opacity: 0;
+  color: #fff;
+  transition: all 0.5s ease-in-out;
+}
+.projects_btn:hover {
+  color: #000;
+}
+.projects .social-icons {
+  display: flex;
+  flex-direction: column;
+}
+.projects footer {
+  transform: rotate(90deg) translate(-6rem, -7rem);
+}
 
 body {
   background: #B4B4B8;
