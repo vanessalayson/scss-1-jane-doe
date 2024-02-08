@@ -1,0 +1,110 @@
+// For mobile, 414px and smaller
+@include media-sm {
+    // .home_name {
+    //     color: yellow;
+    // }
+
+    .home {
+        .social-icons {
+            display: flex;
+            flex-direction: column;
+        }  
+    }
+
+    .contact {
+        padding-top: 30vh;
+
+        &_list {
+            text-align: center;
+            font-size: 1.2rem;
+        }  
+    }
+}
+
+
+// For tablets 768px to 1023px
+@include media-md {
+    // .home_name {
+    //     color: green;
+    // }
+
+    .menu-btn {
+        visibility: hidden;
+    }
+
+    .nav {
+        visibility: visible;
+
+        .menu-nav {
+            transform: translateY(0);
+            height: 100%;
+            display: block;
+            text-align: right;
+            background: transparent;
+
+            &_item {
+                display: inline;
+                padding-right: 1.5rem;
+            }
+
+            &_link {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .about_bio {
+        font-size: 1.5rem;
+
+        p {
+            line-height: 1.7rem;
+        }
+    }
+
+    .projects {
+        &_bio-image {
+            height: 40vh;
+        }
+
+        &_items {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .text-secondary {
+            font-size: 3rem;
+        }
+    }
+
+    .contact_list {
+        grid-template-columns: repeat(2, 1fr);
+        text-align: center;
+    }
+}
+
+// For small laptops 1024px to 1599px
+@include media-lg {
+    // .home_name {
+    //     color: red;
+    // }
+
+    .projects {
+        &_items {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    .contact_list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+// for regular laptops and bigger, over 1600px
+@include media-xl {
+    // .home_name {
+    //     color: blue;
+    // }
+
+    .projects_bio-image {
+        height: 50vh;
+    }
+}

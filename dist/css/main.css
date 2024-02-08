@@ -90,7 +90,7 @@
   justify-content: center;
   height: 100vh;
   overflow: hidden;
-  background-color: #B4B4B8;
+  background-color: #272727;
   list-style-type: none;
   padding-right: 1rem;
   transform: translateY(-100%);
@@ -152,7 +152,7 @@
   grid-gap: 2rem;
 }
 .about .jobs_job {
-  background: #ceced1;
+  background: #414141;
   padding: 0.5rem;
   border-bottom: 5px solid #FF9BD2;
 }
@@ -248,8 +248,99 @@
   transform: rotate(90deg) translate(-6rem, -7rem);
 }
 
+.contact {
+  height: 100%;
+  padding-top: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../img/model-1.jpg") center top;
+  background-size: cover;
+}
+.contact h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.contact_list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+  font-size: 1.5rem;
+}
+.contact .social-icons {
+  position: static;
+  margin-top: 2rem;
+}
+
+@media (max-width: 414px) {
+  .home .social-icons {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact {
+    padding-top: 30vh;
+  }
+  .contact_list {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu-btn {
+    visibility: hidden;
+  }
+  .nav {
+    visibility: visible;
+  }
+  .nav .menu-nav {
+    transform: translateY(0);
+    height: 100%;
+    display: block;
+    text-align: right;
+    background: transparent;
+  }
+  .nav .menu-nav_item {
+    display: inline;
+    padding-right: 1.5rem;
+  }
+  .nav .menu-nav_link {
+    font-size: 1.5rem;
+  }
+  .about_bio {
+    font-size: 1.5rem;
+  }
+  .about_bio p {
+    line-height: 1.7rem;
+  }
+  .projects_bio-image {
+    height: 40vh;
+  }
+  .projects_items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .projects .text-secondary {
+    font-size: 3rem;
+  }
+  .contact_list {
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .projects_items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .contact_list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 1600px) {
+  .projects_bio-image {
+    height: 50vh;
+  }
+}
 body {
-  background: #B4B4B8;
+  background: #272727;
   color: #fff;
   height: 100vh;
   font-family: "Roboto", sans-serif;
